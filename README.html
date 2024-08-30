@@ -1,0 +1,50 @@
+# leia
+deixe  palavra ;
+
+configuração de função () { 
+  criarCanvas ( 400 , 400 );
+
+  palavra = palavraAleatoria ();  
+  
+}
+
+function palavraAleatória () { 
+  
+  let palavras = [ "Caminhante" , "Caminho" , "Caminha" ];  
+  
+  retornar aleatório ( palavras ); 
+}
+
+função inicializaCores () { 
+  background("white");
+  fill("black");
+  tamanho do texto ( 64 );
+  textAlign ( CENTRO , CENTRO );
+}
+
+function palavraParcial ( mínimo , máximo ) { 
+  deixe quantidade = mapa ( mouseX , minimo , maximo , 1 , palavra . length );   
+  deixe parcial = palavra . substring ( 0 , quantidade );   
+  retornar parcial ; 
+}
+
+função draw () { 
+  
+  inicializaCores ();
+
+  deixe texto = palavraParcial ( 0 , largura );   
+    
+  texto ( texto , 200 , 200 );
+  
+}
+
+function modoNoturno ( horário ) { 
+  se ( horario > 18 ) {  
+    console . log ( "Você precisa ligar o modo escuro!" );
+  } outro {
+    console . log ( "Modo noturno não é necessário neste momento." );
+  }
+}
+
+modoNoturno ( 15 );
+modoNoturno ( 20 );
